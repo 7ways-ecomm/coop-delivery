@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%- account %></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/coop-delivery.css" />
+</head>
+<body class="login">
+  <div class="login-block login-block__wrapper">
+    <div class="container">
+      <a href="https://cooplojaonline.com.br/" class="back-button">
+        <span class="icon icon-chevron-right"></span> Voltar ao site principal
+      </a>
+      <div class="login-block__inner">
+        <div class="login-block__box login-block__box--userdata">
+          <div class="login-block__header">
+            <img src="/images/login-box-image.png" alt="" />
+            <h2>Bem-vindo(a)</h2>
+            <p>Entre com seus dados abaixo e comece a realizar suas compras para entrega.</p>
+          </div>
+          <form class="login-block__form">
+            <div class="form-group">
+              <input type="text" class="document" id="document" name="document" placeholder="CPF" required />
+            </div>
+            <div class="form-group">
+              <input type="email" class="email" name="email" id="email" placeholder="E-mail" required />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-submit btn-submit-userdata">Prosseguir <span class="icon icon-chevron-left"></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+  <script src="/js/coop-delivery.js"></script>
+</body>
+</html>

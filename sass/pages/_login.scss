@@ -1,0 +1,252 @@
+body.login {
+  background:$blue;
+  height:100%;
+  min-height:100vh;
+  .login-block {
+    &__wrapper {
+      height:100%;
+      min-height:100vh;
+      .container {
+        position:relative;
+        height:100%;
+        min-height:100vh;
+      }
+      .back-button {
+        position:absolute;
+        top:0;
+        left:0;
+        width: 267px;
+        height: 46px;
+        box-shadow: 0px 8px 16px rgba($salmon, .36);
+        border-radius: 0px 0px 19px 19px;
+        background:$salmon;
+        color:$white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:17px;
+        line-height:20px;
+        font-family: $f-light;
+        text-decoration: none;
+        transition:all .25s ease-in-out;
+        @include mobile {
+          left:0;
+          right:0;
+          margin:0 auto;
+        }
+        &:hover {
+          background:lighten($salmon, 2%);
+          box-shadow: 0px 8px 16px rgba($salmon, .36);
+        }
+        .icon-chevron-right {
+          width:18px;
+          height:10px;
+          display:inline-block;
+          background:$icon-chevron-left;
+          transform:rotate(180deg);
+          margin-right:32px;
+        }
+      }
+    }
+    &__inner {
+      width:100%;
+      height:100%;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+    }
+    &__box {
+      width:100%;
+      max-width:564px;
+      border:1px solid rgba($white, .2);
+      border-radius:42px;
+      text-align: center;
+      padding:66px 99px;
+      @include mobile {
+        margin-top:80px;
+        margin-bottom:40px;
+        padding:66px 16px;
+      }
+      &--userdata {
+        @include mobile {
+          padding:16px 16px 60px;
+        }
+        .login-block {
+          &__header {
+            h2 {
+              @include mobile {
+                font-size:30px;
+                line-height: 36px;
+                margin-top:25px;
+              }
+            }
+          }
+          &__form {
+            .form-group {
+              input, button {
+                @include mobile {
+                  height:45px;
+                  font-size:11px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--userdetail {
+        padding:60px 50px;
+        max-width: 762px;
+        margin-bottom:60px;
+        @include desktop {
+          margin-bottom:160px;
+          margin-top:95px;
+        }
+        @include mobile {
+          border:0;
+          padding:0 8px;
+        }
+        .login-block {
+          &__header {
+            p {
+              margin-top:62px;
+              text-align:left;
+              margin-bottom:31px;
+              @include mobile {
+                text-align:center;
+
+              }
+            }
+          }
+          &__form {
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            position:relative;
+            .form-group {
+              margin-bottom:8px;
+              @include mobile {
+                margin-bottom:16px;
+              }
+              &.form-button {
+                @include desktop {
+                  position:absolute;
+                  bottom:-90px;
+                }
+                .btn {
+                  max-width:332px;
+                  margin:0 auto;
+                }
+              }
+              &.form-link {
+                text-align:left;
+                a {
+                  margin-left:16px;
+                  color:$salmon;
+                }
+              }
+            }
+            .w-50, .w-70, .w-30 {
+              @include mobile {
+                width:100% !important;
+              }
+            }
+            .w-50 {
+              @include desktop {
+                padding-right:4px;
+                & + .w-50 {
+                  padding-left:4px;
+                  padding-right:0;
+                  & + .w-50 {
+                    padding-right:4px;
+                    padding-left:0;
+                  }
+                }
+              }
+            }
+            .w-70 {
+              width:70%;
+              padding-right:4px;
+            }
+            .w-30 {
+              padding-left:4px;
+              width:30%;
+            }
+          }
+        }
+      }
+    }
+    &__header {
+      h2 {
+        font-size:42px;
+        line-height:49px;
+        color:$white;
+        margin-top:48px;
+        margin-bottom:24px;
+        @include mobile {
+          font-size:24px;
+          line-height:28px;
+        }
+      }
+      p {
+        font-size:16px;
+        line-height:19px;
+        color:$white;
+      }
+    }
+    &__form {
+      margin-top:42px;
+      .input-error {
+        font-size:10px;
+        text-transform: uppercase;
+        color:$white;
+        margin-top:8px;
+      }
+      .form-group {
+        margin-bottom:24px;
+        @include mobile {
+          margin-bottom:8px;
+        }
+        &:last-child {
+          margin-bottom:0;
+        }
+        input {
+          width:100%;
+          height:60px;
+          border-radius:30px;
+          border:1px solid $gray;
+          background:$white;
+          padding:21px 26px;
+          font-size:16px;
+          line-height:19px;
+          color:rgba($blue01, .5);
+        }
+        .btn-submit {
+          width:100%;
+          height:60px;
+          border-radius:30px;
+          background:$salmon;
+          padding:18px 26px;
+          color:$white;
+          text-transform: uppercase;
+          letter-spacing: 1.6px;
+          font-weight:bold;
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          transition:all .25s ease-in-out;
+          &:hover {
+            background:lighten($salmon, 2%);
+            box-shadow: 0px 8px 16px rgba($salmon, .36);
+          }
+          .icon-chevron-left {
+            width:18px;
+            height:10px;
+            display:inline-block;
+            background:$icon-chevron-left;
+          }
+        }
+      }
+    }
+  }
+}
