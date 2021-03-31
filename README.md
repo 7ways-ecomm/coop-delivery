@@ -7,7 +7,7 @@ Projeto COOP Delivery
 
 # instalação
 > npm install
--
+
 > gulp
 
 # execução
