@@ -1,4 +1,4 @@
-export default class Login {
+export class Login {
   inputMask(){
     var SPMaskBehavior = function (val) {
       return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
@@ -40,6 +40,18 @@ export default class Login {
         localStorage.setItem('userDocument', document);
         localStorage.setItem('userEmail', email);
         window.location.href = "/userdetail.html";
+      }
+    })
+    $(document).on('submit', $('.login-block__form--userdetail form')[0], function(e){
+      e.preventDefault();
+      let document = $(this).find('#document').val();
+      let email = $(this).find('#email').val();
+      let nome = $(this).find("#nome").val();
+      if(document && email){
+        localStorage.setItem('userDocument', document);
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userName', nome);
+        window.location.href = "/home.html";
       }
     })
     if($('body').find('.login-block__box--login').length){

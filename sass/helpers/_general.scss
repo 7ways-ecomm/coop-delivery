@@ -18,3 +18,12 @@ label:focus,
     -webkit-appearance:none;
     box-shadow: none;
 }
+body.cp-delivery__home {
+  display:flex;
+  flex-direction: column;
+  height:100%;
+  min-height: 100vh;
+  footer.cp-delivery__footer {
+    margin-top:auto;
+  }
+}

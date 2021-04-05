@@ -1,21 +1,8 @@
-footer {
-  &.cp-delivery__footer {
-    background:$blue01;
-    text-align: center;
-    color:$white;
-    margin-top:32px;
-    .container {
-      position:relative;
-    }
-    h2 {
-      font-size: 13px;
-      font-weight:bold;
-      line-height:15px;
-      text-transform: uppercase;
-      padding:32px 0;
-    }
+body.cp-delivery__home {
+  .cp-delivery__content {
+    position:relative;
+    padding-top:53px;
     .back-button {
-      position:absolute;
       top:-17px;
       left:0;
       width: 217px;
@@ -41,14 +28,14 @@ footer {
         background:lighten($salmon, 2%);
         box-shadow: 0px 8px 16px rgba($salmon, .36);
       }
-    }
-    .icon-chevron-right {
-      width:18px;
-      height:10px;
-      display:inline-block;
-      background:$icon-chevron-left;
-      transform:rotate(180deg);
-      margin-right:32px;
+      .icon-chevron-right {
+        width:18px;
+        height:10px;
+        display:inline-block;
+        background:$icon-chevron-left;
+        transform:rotate(180deg);
+        margin-right:32px;
+      }
     }
   }
 }
