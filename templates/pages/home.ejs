@@ -5,24 +5,99 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%- account %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
   <link rel="stylesheet" href="/css/coop-delivery.css" />
 </head>
 <body class="cp-delivery__home">
   <%- include('../layout/header.ejs') %>
   <main class="cp-delivery__content">
-    <div class="container">
-      <a href="https://cooplojaonline.com.br/" class="back-button">
-        <span class="icon icon-chevron-right"></span> Voltar ao site principal
-      </a>
-      <h2>Faça suas compras e nós entregamos com total segurança e conforto!</h2>
-    </div>
+    <section class="cp-delivery__block--first">
+      <div class="container">
+        <div class="cp-delivery__block--first-inner">
+          <a href="https://cooplojaonline.com.br/" class="back-button">
+            <span class="icon icon-chevron-right"></span> Voltar ao site principal
+          </a>
+          <h2>Faça suas compras e nós entregamos com total segurança e conforto!</h2>
+        </div>
+      </div>
+    </section>
+    <section class="cp-delivery__block--second">
+      <div class="container">
+        <div class="cp-delivery__block--slider">
+          <div class="cp-delivery__block--slider-item">
+            <a href="#">
+              <img src="/images/banner-home-1.png" alt="" />
+            </a>
+          </div>
+          <div class="cp-delivery__block--slider-item">
+            <a href="#">
+              <img src="/images/banner-home-2.png" alt="" />
+            </a>
+          </div>
+          <div class="cp-delivery__block--slider-item">
+            <a href="#">
+              <img src="/images/banner-home-1.png" alt="" />
+            </a>
+          </div>
+          <div class="cp-delivery__block--slider-item">
+            <a href="#">
+              <img src="/images/banner-home-2.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cp-delivery__block--shelf">
+      <div class="container">
+        <div class="cp-delivery__block--shelf-title">
+          <h2>Nosso compromisso com a comunidade é o que nos move!</h2>
+          <p class="warning">Os pedidos serão entregues no próximo dia entre 9h da manhã até as 18h da noite de segunda a sábado.</p>
+        </div>
+        <div class="cp-delivery__block--shelf-list">
+          <% for(var i=0;i<11;i++){ %>
+          <div class="cards">
+            <a href="#" class="add-to-wishlist">
+              <span class="icon-wishlist"></span>
+            </a>
+            <img src="https://d2m2e1nklvnw79.cloudfront.net/7891095500604.jpg" width="150" alt="Alimento para pássaro painço Tori 500g">
+            <div class="texts">
+              <span><a href="https://coop-sp.coop.br/coop-entrega/produtos/Tori">Tori</a></span>
+              <h2>Alimento para pássaro painço Tori 500g (13025007)</h2>
+            </div>
+            <strong>R$ 5,79</strong>
+            <div class="quantity">
+              <button class="btn-decrement">-</button>
+              <input type="number" value="01" name="quantity" class="input-quantity">
+              <button class="btn-increment">+</button>
+            </div>
+            <div class="btn-buy">
+              <button class="btn addToCart">Comprar</button>
+            </div>
+          </div>
+          <% }; %>
+        </div>
+        <div class="cp-delivery__block--shelf-pagination">
+          <button class="prev inactive">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <div class="pagination-list">
+            <button class="pag-item active">1</button>
+            <button class="pag-item">2</button>
+            <button class="pag-item">3</button>
+            <button class="pag-item">4</button>
+          </div>
+          <button class="next">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
   <%- include('../layout/footer.ejs') %>
-  <script
-  src="https://code.jquery.com/jquery-1.12.4.min.js"
-  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>

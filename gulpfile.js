@@ -12,6 +12,7 @@ const concat = require('gulp-concat');
 const plumber = require('gulp-plumber');
 const browserify = require('gulp-browserify');
 const autoprefixer = require('gulp-autoprefixer');
+const src = "./";
 
 function swallowError(error){
   console.log(error.toString())
@@ -22,11 +23,11 @@ gulp.task('serve', ['copy', 'ejs', 'sass', 'minify'], function(){
   browserSync.init({
     server: "./build"
   })
-  gulp.watch("./sass/**/*.scss", ['sass']);
-  gulp.watch("./scripts/**/*.js", ['minify']).on('change', browserSync.reload);
-  gulp.watch("./templates/**/*.ejs", ['ejs']).on('change', browserSync.reload);
-  gulp.watch("./images/*.png", ['copy']).on('change', browserSync.reload);
-  gulp.watch("./images/*.jpg", ['copy']).on('change', browserSync.reload);
+  gulp.watch("sass/**/*.scss", {cwd: src}, ['sass']);
+  gulp.watch("scripts/**/*.js", {cwd: src}, ['minify']).on('change', browserSync.reload);
+  gulp.watch("templates/**/*.ejs", {cwd: src}, ['ejs']).on('change', browserSync.reload);
+  gulp.watch("images/*.png", {cwd: src}, ['copy']).on('change', browserSync.reload);
+  gulp.watch("images/*.jpg", {cwd: src}, ['copy']).on('change', browserSync.reload);
 });
 gulp.task('minify', function(){
   return gulp.src('./scripts/**/*.js')

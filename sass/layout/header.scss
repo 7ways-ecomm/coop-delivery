@@ -7,11 +7,26 @@ header {
         align-items:center;
         justify-content:space-between;
         padding:16px 0;
+        @include mobile {
+          flex-wrap:wrap;
+        }
       }
       &--logo {
         min-width:297px;
+        @include mobile {
+          min-width: 0;
+          max-width:131px;
+          img {
+            width:100%;
+            height:auto;
+          }
+        }
       }
       &--search-box {
+        @include mobile {
+          margin-top:24px;
+          width:100%;
+        }
         .form-group {
           display:flex;
           input {
@@ -24,12 +39,24 @@ header {
             line-height:19px;
             color:rgba($blue01, .5);
             padding:8px 30px;
+            @include mobile {
+              font-size:11px;
+              width:calc(100% - 51px);
+              height:44px;
+              padding:8px 16px;
+            }
           }
           button {
             width:69px;
             border:0;
             background:$salmon;
+            @include mobile {
+              width:51px;
+            }
           }
+        }
+        @include mobile {
+          order:100;
         }
       }
       &--store {
@@ -37,6 +64,9 @@ header {
         flex-direction: column;
         min-width:160px;
         margin-left:30px;
+        @include mobile {
+          display:none;
+        }
         p {
           color:$white;
           font-size:12px;
@@ -58,10 +88,17 @@ header {
         align-items:center;
         justify-content:flex-end;
         width:100%;
+        @include mobile {
+          width:calc(100% - 131px);
+          padding-right:16px;
+        }
       }
       &--cart {
         position:relative;
         margin-left:42px;
+        @include mobile {
+          margin-left:24px;
+        }
         .badge-qty {
           position:absolute;
           top:-4px;
@@ -95,6 +132,16 @@ header {
           visibility:hidden;
           transition:all .25s ease-in-out;
           z-index:20;
+          @include mobile {
+            right:-16px;
+            left:auto;
+            transform:translateX(0);
+          }
+          @media screen and (max-width: 1280px){
+            right:-16px;
+            left:auto;
+            transform:translateX(0);
+          }
           &:hover {
             opacity:1;
             visibility:visible;
@@ -111,6 +158,14 @@ header {
             left:50%;
             transform:translateX(60%);
             display:block;
+            @include mobile {
+              left:auto;
+              right:28px;
+            }
+            @media screen and (max-width: 1280px){
+              left:auto;
+              right:28px;
+            }
           }
           strong {
             color:$salmon;

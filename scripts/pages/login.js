@@ -32,7 +32,7 @@ export class Login {
       });
       }
     })
-    $(document).on('submit', $('.login-block__form--userdata form')[0], function(e){
+    $(document).on('submit', '#form-userdata', function(e){
       e.preventDefault();
       let document = $(this).find('#document').val();
       let email = $(this).find('#email').val();
@@ -42,12 +42,12 @@ export class Login {
         window.location.href = "/userdetail.html";
       }
     })
-    $(document).on('submit', $('.login-block__form--userdetail form')[0], function(e){
+    $(document).on('submit', '#form-userdetail', function(e){
       e.preventDefault();
       let document = $(this).find('#document').val();
       let email = $(this).find('#email').val();
       let nome = $(this).find("#nome").val();
-      if(document && email){
+      if(document && email && nome){
         localStorage.setItem('userDocument', document);
         localStorage.setItem('userEmail', email);
         localStorage.setItem('userName', nome);
