@@ -45,9 +45,11 @@ body.cp-delivery__home {
     &__block {
       &--first {
         &-inner {
-          display:flex;
-          align-items:center;
-          flex-direction: column;
+          @include mobile {
+            display:flex;
+            align-items:center;
+            flex-direction: column;
+          }
         }
         .back-button {
           display:inline-flex;
